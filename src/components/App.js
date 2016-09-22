@@ -9,7 +9,7 @@ export default (props) => {
 
       <MyInputContainer />
 
-      <br /><hr />
+      <br /><hr /><br />
 
       <MyDisplayContainer />
 

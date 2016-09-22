@@ -1,14 +1,13 @@
 React Intro
 ===========
 
-This sample uses Redux to store state.
+This sample ajax calls.
 
-The MyInput component still keeps its own state but does invoke the function of
-the parent with the value when the submit button is pressed.  This causes
-MyInputContainer to update the value in the Redux store.
+MyDisplayContainer retrieves the value via an asynchronous ajax call the
+result is stored in the Redux store and then displayed.
 
-MyDisplayContainer retrieves the value from the Redux store and displays the value
-without the need to know anything of MyInput.
+Similarely, the MyInputContainer posts the value via an ajax call.  This time
+only the success/failure message is stored in the Redux store.
 
 Building and Running:
 ---------------------

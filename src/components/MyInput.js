@@ -12,6 +12,7 @@ export default class MyInput extends Component {
     render() {
       return(
         <div>
+          {this.props.ajaxMessage} <br />
           <h3>MyInput asks to enter something:</h3>
           <input
             type="text"

@@ -9,13 +9,18 @@ class MyInputContainer extends Component {
   render() {
     return (
       <MyInput
+        ajaxMessage={this.props.ajaxMessage}
         onSubmit={(value) => this.props.updateMyValue(value)} />
     );
   }
+}
+
+function mapStateToProps({ajaxMessage}) {
+  return { ajaxMessage };
 }
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({ updateMyValue }, dispatch);
 }
 
-export default connect(null, mapDispatchToProps)(MyInputContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(MyInputContainer);
