@@ -17,6 +17,8 @@ export default class MyInput extends Component {
             type="text"
             value={this.state.inputValue}
             onChange={event => this.setState({inputValue: event.target.value})}/>
+          <button onClick={() => this.props.onSubmit(this.state.inputValue)}>
+            Submit</button>
         </div>
       );
   }

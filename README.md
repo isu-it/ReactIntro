@@ -1,13 +1,14 @@
 React Intro
 ===========
 
-This sample uses only React.
+This sample uses Redux to store state.
 
-The MyInput component keeps its own state and doesn't interact outside of itself.
+The MyInput component still keeps its own state but does invoke the function of
+the parent with the value when the submit button is pressed.  This causes
+MyInputContainer to update the value in the Redux store.
 
-The MyOtherInput component is simpler in that it does not keep any state.  Instead
-the component gets its value from the parent and executes a function of the parent
-whenever its value changes.
+MyDisplayContainer retrieves the value from the Redux store and displays the value
+without the need to know anything of MyInput.
 
 Building and Running:
 ---------------------

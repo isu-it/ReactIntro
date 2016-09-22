@@ -1,39 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import MyInput from './MyInput';
-import MyOtherInput from './MyOtherInput';
+import MyInputContainer from '../containers/MyInputContainer';
+import MyDisplayContainer from '../containers/MyDisplayContainer';
 
-export default class App extends Component {
-  constructor(props) {
-      super(props);
+export default (props) => {
+  return (
+    <div>
 
-      this.state = {
-        notFunny: "Hello there"
-      };
-    }
+      <MyInputContainer />
 
-  myOtherInputChange(notFunny) {
-    if (notFunny.includes("funny")) {
-      this.setState({notFunny: notFunny.replace("funny", "*****")});
-    } else {
-      this.setState({notFunny});
-    }
-  }
+      <br /><hr />
 
-  render() {
-    return(
-      <div>
+      <MyDisplayContainer />
 
-        <MyInput />
-
-        <br /><hr />
-
-        <MyOtherInput
-          value={this.state.notFunny}
-          onChange={(value) => this.myOtherInputChange(value)}
-        />
-        
-      </div>
-    );
-  }
+    </div>
+  );
 }
