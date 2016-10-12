@@ -16,3 +16,5 @@ Install the dependencies:
 
 Run the application:
   `npm start`  
+ or for the advanced webpack development server features:
+   `http://localhost:8080/webpack-dev-server/index.html`
